@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def pagina_inicial():
-    return "APP FOR PYTHON AND FLASK"
+    return "APP PYTHON AND FLASK "
 
 if __name__ == '__main__':
     port = os.getenv('PORT')
