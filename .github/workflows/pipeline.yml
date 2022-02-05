@@ -53,9 +53,9 @@ jobs:
 
       # Adicionando o Repositório Remoto do Heroku para poder enviar o código da app
       - name: Add Heroku Remote
-        run: heroku git:remote --app devopslab-fnascimento
+        run: heroku git:remote --app $HEROKU_APP_NAME
         env:
-            HEROKU_APP_NAME: devopslab-fnascimento
+            HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
       # Enviando o código da App para o Heroku fazer Deploy
       - name: Push to Heroku & Deploy
